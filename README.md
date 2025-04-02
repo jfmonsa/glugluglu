@@ -15,7 +15,7 @@ Para ejecutar la API de forma local, sigue los siguientes pasos:
 1. **Clona este repositorio:**
 
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/jfmonsa/glugluglu.git
    cd tu_repositorio
    ```
 
@@ -27,18 +27,12 @@ Para ejecutar la API de forma local, sigue los siguientes pasos:
    pip install -r requirements.txt
    ```
 
-   O si no tienes un archivo `requirements.txt`, instala `fastapi` y `uvicorn` manualmente:
-
-   ```bash
-   pip install fastapi uvicorn
-   ```
-
 3. **Ejecuta la aplicación:**
 
    Una vez que tengas todo instalado, puedes ejecutar el servidor con `uvicorn`:
 
    ```bash
-   uvicorn main:app --reload
+   python -m fastapi dev main.py
    ```
 
 4. La API estará corriendo en `http://127.0.0.1:8000`.
@@ -84,7 +78,7 @@ Crea un nuevo `item`.
 
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:8000/items/' \
+  'https://glugluglu.vercel.app//items/' \
   -H 'Content-Type: application/json' \
   -d '{
   "name": "Laptop",
@@ -116,7 +110,7 @@ Obtiene todos los `items`.
 #### Cómo probar con `curl`:
 
 ```bash
-curl -X 'GET' 'http://127.0.0.1:8000/items/'
+curl -X 'GET' 'https://glugluglu.vercel.app/items/'
 ```
 
 ### 3. **GET /items/{item_id}**
@@ -140,7 +134,7 @@ Obtiene un `item` específico por su `id`.
 #### Cómo probar con `curl`:
 
 ```bash
-curl -X 'GET' 'http://127.0.0.1:8000/items/1'
+curl -X 'GET' 'https://glugluglu.vercel.app/items/1'
 ```
 
 ### 4. **PUT /items/{item_id}**
@@ -175,7 +169,7 @@ Actualiza un `item` por su `id`.
 
 ```bash
 curl -X 'PUT' \
-  'http://127.0.0.1:8000/items/1' \
+  'https://glugluglu.vercel.app/items/1' \
   -H 'Content-Type: application/json' \
   -d '{
   "name": "Laptop Pro",
@@ -203,21 +197,21 @@ Elimina un `item` por su `id`.
 #### Cómo probar con `curl`:
 
 ```bash
-curl -X 'DELETE' 'http://127.0.0.1:8000/items/1'
+curl -X 'DELETE' 'http://https://glugluglu.vercel.app/items/1'
 ```
 
 ## Despliegue en la Nube
 
-La API está desplegada en [Render](https://render.com/), un servicio gratuito de alojamiento de aplicaciones web. Puedes acceder a la API desplegada a través del siguiente enlace:
+La API está desplegada en [Render](https://vercel.com/), un servicio gratuito de alojamiento de aplicaciones web. Puedes acceder a la API desplegada a través del siguiente enlace:
 
-[Enlace a la API desplegada](https://tu-app.onrender.com)
+[Enlace a la API desplegada](https://glugluglu.vercel.app/)
 
 ### Documentación interactiva
 
 Una vez desplegada, la documentación interactiva está disponible en:
 
-- [Swagger UI](https://tu-app.onrender.com/docs)
-- [Redoc](https://tu-app.onrender.com/redoc)
+- [Swagger UI](https://glugluglu.vercel.app/docs)
+- [Redoc](https://glugluglu.vercel.app/redoc)
 
 ## Conclusión
 
