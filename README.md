@@ -2,6 +2,10 @@
 
 Este proyecto implementa una API RESTful utilizando FastAPI que realiza operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre un recurso `item`. Los datos se almacenan en un diccionario en memoria, simulando una base de datos.
 
+## Integrantes
++ Leider Santiago Cortes Hernandez - 2159879
++ Juan Felipe Monsalve Vargas - 2160145
+
 ## Requisitos
 
 - Python 3.7+
